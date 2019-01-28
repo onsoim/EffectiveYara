@@ -1,17 +1,12 @@
 import yara
 import os
 
-def references():
-	url1 = "https://yara.readthedocs.io/en/v3.4.0/writingrules.html"
-	url2 = "https://malwology.com/2018/08/24/python-for-malware-analysis-getting-started/"
-	url3 = "https://github.com/ctxis/CAPE/tree/master/data/yara/CAPE"
-
-#folder = './sample/malware/'
+folder = './sample/malware/'
 #folder = './sample/nonMalware/visual_studio/'
 #folder = './sample/nonMalware/cerbero/'
-folder = './sample/nonMalware/sysinternals/'
+#folder = './sample/nonMalware/sysinternals/'
 
-rules = yara.compile(filepath='yar_mine/onsoim.yar')
+rules = yara.compile(filepath='yar_mine/rich.yar')
 filelist = os.listdir(folder)
 malware = []
 for filename in filelist:
