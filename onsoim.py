@@ -13,7 +13,7 @@ for filename in filelist:
 	path_filename = folder + filename
 	if os.path.isfile(path_filename):
 		match = rules.match(path_filename)
-		print match
+		print match#[0].strings
 		for i in range(len(match)):
 			if match[i].rule == "malware":
 				malware.append(filename)
